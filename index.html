@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shoheb | Portfolio</title>
+  <meta name="description" content="BCA student & tech professional offering web development and hardware services from Malda, West Bengal." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Nunito+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- EmailJS Library -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── BACKGROUND BLOBS ── -->
+  <div class="blob" id="blob1"></div>
+  <div class="blob" id="blob2"></div>
+  <div class="blob" id="blob3"></div>
+
+  <!-- ── TOAST NOTIFICATION ── -->
+  <div id="toast"></div>
+
+  <!-- ════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <nav id="navbar">
+    <a class="nav-logo" onclick="showPage('home')">Shoheb<em> Aktar</em></a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('home'); return false;">Home</a></li>
+      <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+      <li><a href="/shohebcv.jpg">View CV</a></li>
+      <li><a href="#" onclick="showPage('portfolio'); return false;">Portfolio</a></li>
+      <li><a href="#" onclick="showPage('projects'); return false;">Projects</a></li>
+      <li><a href="#" onclick="showPage('services'); return false;">Services</a></li>
+    </ul>
+    <a class="nav-cta" href="#" onclick="showPage('contact'); return false;">Hire Me →</a>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#" onclick="showPage('home'); toggleMenu(); return false;">Home</a>
+    <a href="#" onclick="showPage('about'); toggleMenu(); return false;">About</a>
+    <a href="#" onclick="showPage('portfolio'); toggleMenu(); return false;">Portfolio</a>
+    <a href="#" onclick="showPage('projects'); toggleMenu(); return false;">Projects</a>
+    <a href="#" onclick="showPage('services'); toggleMenu(); return false;">Services</a>
+    <a href="#" onclick="showPage('contact'); toggleMenu(); return false;">Contact</a>
+  </div>
+
+
+  <!-- ════════════════════════════════════════
+       HOME PAGE
+  ════════════════════════════════════════ -->
+  <div id="home" class="page active">
+
+    <!-- HERO -->
+    <section class="hero-section">
+      <div class="hero-inner">
+
+        <!-- Left: Text -->
+        <div class="hero-left">
+          <div class="hero-badge">Available for Projects</div>
+          <h1 class="hero-name">
+            SHOHEB AKTAR<br>
+            <span class="line2"></span>
+          </h1>
+          <div class="hero-typing">
+            <span class="prefix">const role =</span>
+            <span>"</span>
+            <span id="typed-text">Tech Enthusiast</span>
+            <span>"</span>
+            <span class="cursor-blink"></span>
+          </div>
+          <p class="hero-desc">
+            BCA student &amp; digital craftsman based in Malda, WB.
+            I build seamless web experiences and solve real hardware
+            problems — locally and globally.
+          </p>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="showPage('portfolio')">View My Work</button>
+            <button class="btn-secondary" onclick="showPage('contact')">Let's Talk</button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item"><div class="num">20+</div><div class="label">Projects Done</div></div>
+            <div class="stat-item"><div class="num">15+</div><div class="label">Happy Clients</div></div>
+            <div class="stat-item"><div class="num">2+</div><div class="label">Years Exp.</div></div>
+          </div>
+        </div>
+
+        <!-- Right: Photo -->
+        <div class="hero-photo-wrap">
+          <div class="floating-icon">⚡</div>
+          <div class="floating-icon">💻</div>
+          <div class="floating-icon">🔧</div>
+          <div class="hero-photo-ring">
+            <div class="hero-photo-inner">
+              <img src="/aa.png" alt="Shoheb" />
+              <span class="placeholder-avatar"></span>
+            </div>
+          </div>
+          <div class="hero-photo-badge">
+            <strong>Open to Work</strong>
+            Digital &amp; Local Services
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ABOUT TEASER -->
+    <div class="section-teaser reveal">
+      <div class="section-label">Who I Am</div>
+      <h2 class="section-title">A Passionate <em>Computer Student</em><br>&amp; Tech Problem Solver</h2>
+      <div class="about-grid">
+        <div class="glass-card about-card">
+          <div class="icon">🎓</div>
+          <h3>BCA Student</h3>
+          <p>Currently pursuing Bachelor of Computer Applications, building strong foundations in software, networks, and systems.</p>
+        </div>
+        <div class="glass-card about-card">
+          <div class="icon">🌐</div>
+          <h3>Web Developer</h3>
+          <p>Crafting modern, responsive websites — from institutional portals to e-commerce stores and landing pages.</p>
+        </div>
+        <div class="glass-card about-card">
+          <div class="icon">🔩</div>
+          <h3>Hardware Specialist</h3>
+          <p>Hands-on experience with PC building, repairs, OS installation, and local tech support across Malda district.</p>
+        </div>
+        <div class="glass-card about-card">
+          <div class="icon">📊</div>
+          <h3>Data Professional</h3>
+          <p>Providing accurate, fast-turnaround data entry and document processing services for businesses worldwide.</p>
+        </div>
+      </div>
+      <button class="see-more-link" onclick="showPage('about')">Explore About Me →</button>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- PORTFOLIO TEASER -->
+    <div class="section-teaser reveal">
+      <div class="section-label">My Work</div>
+      <h2 class="section-title">Recent <em>Portfolio</em> Highlights</h2>
+      <div class="portfolio-grid">
+        <div class="glass-card portfolio-card" onclick="showPage('portfolio')">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#dde8f2,#c4d9ee);" data-label="🏫 Institutional Website">🏫</div>
+          <div class="portfolio-card-body">
+            <p>Modern school/college portal with full CMS integration.</p>
+            <span class="tag tag-navy">Next.js</span><span class="tag tag-gold">Tailwind</span>
+          </div>
+        </div>
+        <div class="glass-card portfolio-card" onclick="showPage('portfolio')">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#f2e8d0,#eedfc0);" data-label="🛒 E-Commerce Store">🛒</div>
+          <div class="portfolio-card-body">
+            <p>Full-featured online store with cart, checkout &amp; admin panel.</p>
+            <span class="tag tag-gold">React</span><span class="tag tag-red">Node.js</span>
+          </div>
+        </div>
+        <div class="glass-card portfolio-card" onclick="showPage('portfolio')">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#ddeaf2,#cce0ec);" data-label="🖥️ PC Build Portfolio">🖥️</div>
+          <div class="portfolio-card-body">
+            <p>Documentation of custom PC builds and hardware setups.</p>
+            <span class="tag tag-navy">Hardware</span><span class="tag tag-gold">Local</span>
+          </div>
+        </div>
+      </div>
+      <button class="see-more-link" onclick="showPage('portfolio')">View All Projects →</button>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- SERVICES TEASER -->
+    <div class="section-teaser reveal">
+      <div class="section-label">What I Offer</div>
+      <h2 class="section-title">Digital &amp; <em>Local</em> Tech Services</h2>
+      <div class="services-grid">
+        <div class="glass-card service-category">
+          <div class="service-category-header">
+            <span class="cat-icon">🌐</span>
+            <h3>Digital Services <span class="tag tag-navy" style="font-size:.66rem;">Pan-India / Global</span></h3>
+          </div>
+          <div class="service-item"><div class="service-item-icon navy-bg">💻</div><div><h4>Web Development</h4><p>Institutional, E-commerce &amp; Landing Pages</p></div></div>
+          <div class="service-item"><div class="service-item-icon navy-bg">🔍</div><div><h4>Web Review / Audit</h4><p>Performance, SEO &amp; UX analysis</p></div></div>
+          <div class="service-item"><div class="service-item-icon navy-bg">🖥️</div><div><h4>Software Solutions</h4><p>Remote troubleshooting via AnyDesk</p></div></div>
+          <div class="service-item"><div class="service-item-icon navy-bg">📝</div><div><h4>Data Entry &amp; Typing</h4><p>Accurate, fast turnaround</p></div></div>
+        </div>
+        <div class="glass-card service-category">
+          <div class="service-category-header">
+            <span class="cat-icon">🔧</span>
+            <h3>Hardware Services <span class="local-badge">Malda Only</span></h3>
+          </div>
+          <div class="service-item"><div class="service-item-icon gold-bg">🛠️</div><div><h4>Hardware Solutions</h4><p>Repairs, component upgrades &amp; diagnostics</p></div></div>
+          <div class="service-item"><div class="service-item-icon gold-bg">💿</div><div><h4>OS Installation</h4><p>Windows / Linux setup &amp; driver config</p></div></div>
+          <div class="service-item"><div class="service-item-icon gold-bg">🖥️</div><div><h4>PC Setup / Building</h4><p>Custom builds within Malda District</p></div></div>
+          <div class="service-item"><div class="service-item-icon gold-bg">📡</div><div><h4>Network Setup</h4><p>Home &amp; office networking solutions</p></div></div>
+        </div>
+      </div>
+      <button class="see-more-link" onclick="showPage('services')">Explore All Services →</button>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- CONTACT TEASER -->
+    <div class="section-teaser reveal">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Let's Build Something <em>Great</em> Together</h2>
+      <div class="contact-layout">
+        <div>
+          <p style="color:var(--text2);margin-bottom:24px;line-height:1.8;font-size:.95rem;">
+            Whether you need a new website, a PC built, or just some tech help —
+            I'm one message away. Digital services globally; hardware services for Malda district.
+          </p>
+          <a class="contact-link" href="mailto:shoheb@email.com">
+            <div class="link-icon">📧</div>
+            <div class="link-info"><div class="link-label">Email</div><div class="link-val">shohebaktarpc@gmail.com</div></div>
+          </a>
+          <a class="contact-link" href="#">
+            <div class="link-icon">📱</div>
+            <div class="link-info"><div class="link-label">WhatsApp</div><div class="link-val">+91 XXXXX XXXXX</div></div>
+          </a>
+          <a class="contact-link" href="#">
+            <div class="link-icon">📍</div>
+            <div class="link-info"><div class="link-label">Location</div><div class="link-val">Malda, West Bengal, India</div></div>
+          </a>
+          <!-- Direct contact buttons injected here by script.js -->
+          <div class="direct-contact-slot"></div>
+        </div>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group"><label>Name</label><input type="text" name="from_name" placeholder="Your name" required /></div>
+            <div class="form-group"><label>Email</label><input type="email" name="from_email" placeholder="your@email.com" required /></div>
+          </div>
+          <div class="form-group">
+            <label>Service Needed</label>
+            <select name="service">
+              <option>Web Development</option>
+              <option>Web Audit / Review</option>
+              <option>Data Entry</option>
+              <option>Software / Remote Support</option>
+              <option>Hardware Repair (Malda)</option>
+              <option>PC Building (Malda)</option>
+              <option>OS Installation (Malda)</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Message</label><textarea name="message" placeholder="Tell me about your project…" required></textarea></div>
+          <button type="submit" class="btn-primary" style="width:100%;">Send Message →</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="nav-logo" onclick="showPage('home')">Sho<em>heb</em>.</a>
+            <p>BCA student &amp; tech professional offering digital and local services from Malda, West Bengal.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Navigate</h4>
+            <a onclick="showPage('home')">Home</a>
+            <a onclick="showPage('about')">About</a>
+            <a onclick="showPage('portfolio')">Portfolio</a>
+            <a onclick="showPage('projects')">Projects</a>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a onclick="showPage('services')">Web Dev</a>
+            <a onclick="showPage('services')">Web Audit</a>
+            <a onclick="showPage('services')">Data Entry</a>
+            <a onclick="showPage('services')">Hardware</a>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <a onclick="showPage('contact')">Hire Me</a>
+            <a href="mailto:shoheb@email.com">Email</a>
+            <a href="#">WhatsApp</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 Shoheb. Crafted with ❤ in Malda, WB.</p>
+          <div class="social-links">
+            <a class="social-link" href="https://github.com/mraktar01" title="GitHub">⌨</a>
+            <a class="social-link" href="https://www.linkedin.com/in/mraktar01/" title="LinkedIn">in</a>
+            <a class="social-link" href="https://x.com/mraktar01" title="Twitter">𝕏</a>
+            <a class="social-link" href="https://www.instagram.com/mraktar_01/" title="Instagram">◎</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div><!-- /home -->
+
+
+  <!-- ════════════════════════════════════════
+       ABOUT PAGE
+  ════════════════════════════════════════ -->
+  <div id="about" class="page">
+    <div class="inner-page-hero">
+      <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+      <div class="section-label">About Me</div>
+      <h1 class="section-title">The <em>Story</em> Behind the Screen</h1>
+    </div>
+    <div style="padding:0 clamp(20px,6vw,80px) 80px; max-width:1200px; margin:0 auto;">
+      <div class="about-content">
+        <div class="about-left">
+          <div class="about-photo-box">👨‍💻</div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.2rem;margin-bottom:16px;color:var(--navy);">Technical Skills</h3>
+          <div class="skill-bar"><div class="skill-header"><span>Web Development</span><span>85%</span></div><div class="bar"><div class="bar-fill" style="width:85%"></div></div></div>
+          <div class="skill-bar"><div class="skill-header"><span>React / Next.js</span><span>78%</span></div><div class="bar"><div class="bar-fill" style="width:78%"></div></div></div>
+          <div class="skill-bar"><div class="skill-header"><span>Hardware &amp; PC Build</span><span>90%</span></div><div class="bar"><div class="bar-fill" style="width:90%"></div></div></div>
+          <div class="skill-bar"><div class="skill-header"><span>Data Entry</span><span>95%</span></div><div class="bar"><div class="bar-fill" style="width:95%"></div></div></div>
+          <div class="skill-bar"><div class="skill-header"><span>OS Installation</span><span>92%</span></div><div class="bar"><div class="bar-fill" style="width:92%"></div></div></div>
+          <div class="skill-bar"><div class="skill-header"><span>Tailwind / CSS</span><span>82%</span></div><div class="bar"><div class="bar-fill" style="width:82%"></div></div></div>
+        </div>
+        <div class="about-right">
+          <h3>Hello, I'm Shoheb</h3>
+          <p>I'm a BCA student based in Malda, West Bengal, passionate about building things that live on the internet — and the machines that run them. My journey started with curiosity about how computers work, which led me down two parallel paths: web development and hardware engineering.</p>
+          <p>On the digital side, I create modern websites and web applications for clients across India and globally. On the physical side, I help locals in Malda with everything from OS installations to building custom PC rigs from scratch.</p>
+          <h3>What I Bring</h3>
+          <ul>
+            <li>Clean, performant code using React, Next.js &amp; Tailwind</li>
+            <li>Strong attention to design and user experience</li>
+            <li>Reliable, honest communication with every client</li>
+            <li>Hands-on hardware expertise built through real experience</li>
+            <li>Fast delivery with quality that speaks for itself</li>
+          </ul>
+          <h3>Education</h3>
+          <div class="glass-card edu-card">
+            <div class="edu-year">2023–26</div>
+            <div class="edu-detail"><h4>Bachelor of Computer Applications (BCA)</h4><p>Pursuing full-time — Malda, West Bengal</p></div>
+          </div>
+          <div class="glass-card edu-card">
+            <div class="edu-year">2023</div>
+            <div class="edu-detail"><h4>Higher Secondary (Class XII)</h4><p>Science stream — Malda, West Bengal</p></div>
+          </div>
+          <div style="margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;">
+            <button class="btn-primary" onclick="showPage('services')">Explore Services</button>
+            <button class="btn-secondary" onclick="showPage('contact')">Contact Me</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /about -->
+
+
+  <!-- ════════════════════════════════════════
+       PORTFOLIO PAGE
+  ════════════════════════════════════════ -->
+  <div id="portfolio" class="page">
+    <div class="inner-page-hero">
+      <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+      <div class="section-label">Portfolio</div>
+      <h1 class="section-title">Work That <em>Speaks</em> For Itself</h1>
+    </div>
+    <div style="padding:0 clamp(20px,6vw,80px) 80px; max-width:1200px; margin:0 auto;">
+      <div class="portfolio-filter">
+        <button class="filter-btn active" onclick="filterPF(this,'all')">All</button>
+        <button class="filter-btn" onclick="filterPF(this,'web')">Web Dev</button>
+        <button class="filter-btn" onclick="filterPF(this,'hardware')">Hardware</button>
+        <button class="filter-btn" onclick="filterPF(this,'data')">Data</button>
+      </div>
+      <div class="portfolio-full-grid">
+        <!-- ── ADD MORE PORTFOLIO CARDS BELOW ── -->
+        <div class="glass-card pf-card" data-cat="web">
+          <div class="pf-thumb" style="background:linear-gradient(135deg,#d8e8f4,#c2d9ee);">🏫</div>
+          <div class="pf-card-body"><h3>College Portal — Institutional Website</h3><p>A complete web portal for an educational institution with notice boards, faculty listing, and admission forms.</p><span class="tag tag-navy">Next.js</span><span class="tag tag-gold">Tailwind</span><span class="tag tag-navy">CMS</span></div>
+        </div>
+        <div class="glass-card pf-card" data-cat="web">
+          <div class="pf-thumb" style="background:linear-gradient(135deg,#f4e8d0,#eedad8);">🛒</div>
+          <div class="pf-card-body"><h3>Local Business E-Commerce Store</h3><p>Full-featured shop with product catalog, cart, Razorpay payment gateway, and admin dashboard.</p><span class="tag tag-gold">React</span><span class="tag tag-red">Node.js</span><span class="tag tag-navy">Razorpay</span></div>
+        </div>
+        <div class="glass-card pf-card" data-cat="web">
+          <div class="pf-thumb" style="background:linear-gradient(135deg,#dce8f5,#cfe2f0);">🚀</div>
+          <div class="pf-card-body"><h3>SaaS Landing Page</h3><p>High-converting landing page with animated hero, feature sections, pricing table, and contact CTA.</p><span class="tag tag-navy">HTML/CSS</span><span class="tag tag-gold">GSAP</span></div>
+        </div>
+        <div class="glass-card pf-card" data-cat="hardware">
+          <div class="pf-thumb" style="background:linear-gradient(135deg,#ddf2e6,#c8ecda);">🖥️</div>
+          <div class="pf-card-body"><h3>Custom Gaming PC Build — Malda</h3><p>Budget gaming rig: Ryzen 5, RX 6600, 16GB RAM, NVMe SSD. Full cable management and OS setup.</p><span class="tag tag-gold">Hardware</span><span class="tag tag-gold">Local</span></div>
+        </div>
+        <div class="glass-card pf-card" data-cat="hardware">
+          <div class="pf-thumb" style="background:linear-gradient(135deg,#f2edda,#ede5c5);">💿</div>
+          <div class="pf-card-body"><h3>Office PC Refresh — OS + Driver Setup</h3><p>Upgraded 8 office machines to Windows 11, installed all drivers, configured Office suite and printers.</p><span class="tag tag-gold">Windows 11</span><span class="tag tag-gold">Local</span></div>
+        </div>
+        <div class="glass-card pf-card" data-cat="data">
+          <div class="pf-thumb" style="background:linear-gradient(135deg,#dce6f5,#d0def0);">📊</div>
+          <div class="pf-card-body"><h3>Product Data Entry — 5000+ SKUs</h3><p>Entered and verified 5000+ product listings with descriptions, pricing, and categories.</p><span class="tag tag-navy">Data Entry</span><span class="tag tag-navy">Excel</span></div>
+        </div>
+        <!-- ── COPY THE BLOCK ABOVE TO ADD MORE ── -->
+      </div>
+    </div>
+  </div><!-- /portfolio -->
+
+
+  <!-- ════════════════════════════════════════
+       PROJECTS PAGE
+  ════════════════════════════════════════ -->
+  <div id="projects" class="page">
+    <div class="inner-page-hero">
+      <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+      <div class="section-label">Projects</div>
+      <h1 class="section-title">Things I've <em>Built</em> &amp; Learned From</h1>
+    </div>
+    <div style="padding:0 clamp(20px,6vw,80px) 80px; max-width:1200px; margin:0 auto;">
+      <div class="projects-list">
+        <!-- ── ADD MORE PROJECT ROWS BELOW ── -->
+        <div class="glass-card project-row">
+          <div class="project-num">01</div>
+          <div class="project-content">
+            <h3>Personal Portfolio Website (This Site)</h3>
+            <p>Designed and built this portfolio from scratch — glassmorphism UI, multi-page SPA routing, typing animations, fully responsive.</p>
+            <div style="margin-bottom:12px;"><span class="tag tag-navy">HTML</span><span class="tag tag-navy">CSS</span><span class="tag tag-gold">JavaScript</span></div>
+            <div class="project-links">
+              <a href="#" class="project-link-btn primary">Live Demo</a>
+              <a href="#" class="project-link-btn secondary">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card project-row">
+          <div class="project-num">02</div>
+          <div class="project-content">
+            <h3>Local Business Directory — Malda</h3>
+            <p>A web directory listing local businesses in Malda with search, category filters, and WhatsApp contact integration.</p>
+            <div style="margin-bottom:12px;"><span class="tag tag-navy">Next.js</span><span class="tag tag-gold">Tailwind</span><span class="tag tag-red">Firebase</span></div>
+            <div class="project-links">
+              <a href="#" class="project-link-btn primary">Live Demo</a>
+              <a href="#" class="project-link-btn secondary">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card project-row">
+          <div class="project-num">03</div>
+          <div class="project-content">
+            <h3>Student Result Management System</h3>
+            <p>A PHP + MySQL web app for managing student marks, generating report cards, and sending SMS notifications.</p>
+            <div style="margin-bottom:12px;"><span class="tag tag-gold">PHP</span><span class="tag tag-red">MySQL</span><span class="tag tag-navy">Bootstrap</span></div>
+            <div class="project-links">
+              <a href="#" class="project-link-btn primary">Live Demo</a>
+              <a href="#" class="project-link-btn secondary">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card project-row">
+          <div class="project-num">04</div>
+          <div class="project-content">
+            <h3>PC Benchmark &amp; Spec Tracker App</h3>
+            <p>A React app to compare CPU/GPU performance metrics, useful when advising clients on hardware upgrades.</p>
+            <div style="margin-bottom:12px;"><span class="tag tag-navy">React</span><span class="tag tag-gold">Chart.js</span><span class="tag tag-navy">REST API</span></div>
+            <div class="project-links">
+              <a href="#" class="project-link-btn primary">Live Demo</a>
+              <a href="#" class="project-link-btn secondary">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card project-row">
+          <div class="project-num">05</div>
+          <div class="project-content">
+            <h3>Automated Data Entry Toolkit</h3>
+            <p>Python scripts to automate data formatting, CSV cleaning, and bulk form-filling — reduced entry time by 70%.</p>
+            <div style="margin-bottom:12px;"><span class="tag tag-gold">Python</span><span class="tag tag-red">Pandas</span><span class="tag tag-navy">Automation</span></div>
+            <div class="project-links">
+              <a href="#" class="project-link-btn secondary">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- ── COPY THE BLOCK ABOVE TO ADD MORE ── -->
+      </div>
+    </div>
+  </div><!-- /projects -->
+
+
+  <!-- ════════════════════════════════════════
+       SERVICES PAGE
+  ════════════════════════════════════════ -->
+  <div id="services" class="page">
+    <div class="inner-page-hero">
+      <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+      <div class="section-label">Services</div>
+      <h1 class="section-title">Digital &amp; Local <em>Tech Solutions</em></h1>
+    </div>
+    <div style="padding:0 clamp(20px,6vw,80px) 80px; max-width:1200px; margin:0 auto;">
+      <div class="services-full">
+        <h2>🌐 Digital Services <span class="tag tag-navy" style="font-size:.74rem;vertical-align:middle;">Pan-India / Global</span></h2>
+        <div class="service-cards-grid">
+          <div class="glass-card svc-card"><div class="svc-icon">💻</div><h3>Web Development</h3><p>From simple landing pages to complex platforms — built with modern tech and clean code.</p><ul><li>Institutional / School / College Websites</li><li>E-Commerce Stores with Payment Integration</li><li>Landing Pages &amp; Sales Funnels</li><li>Portfolio &amp; Personal Branding Sites</li></ul></div>
+          <div class="glass-card svc-card"><div class="svc-icon">🔍</div><h3>Web Review / Audit</h3><p>Comprehensive analysis of your existing website with actionable recommendations.</p><ul><li>Performance &amp; Load Speed Analysis</li><li>SEO Health Check</li><li>UX / Usability Review</li><li>Mobile Responsiveness Audit</li></ul></div>
+          <div class="glass-card svc-card"><div class="svc-icon">🖥️</div><h3>Remote Software Support</h3><p>Can't figure out a software issue? I'll connect remotely via AnyDesk and fix it live.</p><ul><li>Windows / Software Troubleshooting</li><li>Virus Removal &amp; Cleanup</li><li>Software Installation &amp; Config</li><li>Remote Desktop via AnyDesk</li></ul></div>
+          <div class="glass-card svc-card"><div class="svc-icon">📝</div><h3>Data Entry &amp; Typing</h3><p>Accurate, fast and reliable data entry for businesses of all sizes.</p><ul><li>Excel / Google Sheets Data Entry</li><li>PDF to Word / Excel Conversion</li><li>Product Listing &amp; Catalog Entry</li><li>Fast typing with high accuracy</li></ul></div>
+        </div>
+
+        <h2>🔧 Hardware Services <span class="local-badge" style="font-size:.74rem;vertical-align:middle;">Malda District Only</span></h2>
+        <div style="margin-bottom:20px;padding:15px 20px;border-radius:12px;background:rgba(176,125,46,0.07);border:1px solid rgba(176,125,46,0.22);font-size:.83rem;color:var(--gold);display:flex;gap:10px;align-items:flex-start;">
+          <span>⚠️</span>
+          <span>Hardware services are available <strong>exclusively within Malda District, West Bengal</strong>. Contact me to confirm availability in your area.</span>
+        </div>
+        <div class="service-cards-grid">
+          <div class="glass-card svc-card"><div class="svc-icon">🛠️</div><h3>Hardware Repair &amp; Upgrade</h3><p>Quick turnaround, honest pricing. Diagnosed and repaired hundreds of machines across Malda.</p><ul><li>RAM, HDD / SSD Upgrades</li><li>Motherboard &amp; PSU Diagnosis</li><li>Cooling System Cleaning</li><li>Component Replacement</li></ul></div>
+          <div class="glass-card svc-card"><div class="svc-icon">💿</div><h3>OS Installation</h3><p>Fresh OS installs, upgrades, and full driver configuration for Windows and Linux systems.</p><ul><li>Windows 10 / 11 Installation</li><li>Ubuntu / Linux Distros</li><li>Driver Installation &amp; Configuration</li><li>Activation &amp; Post-Install Setup</li></ul></div>
+          <div class="glass-card svc-card"><div class="svc-icon">🖥️</div><h3>Custom PC Building</h3><p>Dream PC from scratch — part selection, assembly, cable management &amp; OS setup.</p><ul><li>Budget &amp; Gaming Build Consultation</li><li>Part Selection &amp; Procurement Advice</li><li>Assembly, Cable Management</li><li>OS Setup &amp; Benchmarking</li></ul></div>
+          <div class="glass-card svc-card"><div class="svc-icon">📡</div><h3>Network &amp; Peripheral Setup</h3><p>Get your home or office network running smoothly with proper configuration.</p><ul><li>WiFi Router Setup &amp; Troubleshooting</li><li>Printer / Scanner Configuration</li><li>Home Office Setup</li><li>Basic CCTV Setup Advice</li></ul></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:16px;">
+        <button class="btn-primary" onclick="showPage('contact')">Get a Free Quote →</button>
+      </div>
+    </div>
+  </div><!-- /services -->
+
+
+  <!-- ════════════════════════════════════════
+       CONTACT PAGE
+  ════════════════════════════════════════ -->
+  <div id="contact" class="page">
+    <div class="inner-page-hero">
+      <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+      <div class="section-label">Contact</div>
+      <h1 class="section-title">Let's Start a <em>Conversation</em></h1>
+    </div>
+    <div style="padding:0 clamp(20px,6vw,80px) 80px; max-width:1200px; margin:0 auto;">
+      <div class="contact-full">
+        <!-- Left: Info -->
+        <div>
+          <p style="color:var(--text2);margin-bottom:26px;line-height:1.82;font-size:.94rem;">
+            Have a project in mind, need hardware help in Malda, or just want to say hi?
+            Fill in the form or reach me directly. I typically respond within 24 hours.
+          </p>
+          <a class="contact-link" href="mailto:shohebaktarpc@gmail.com">
+            <div class="link-icon">📧</div>
+            <div class="link-info"><div class="link-label">Email</div><div class="link-val">shohebaktarpc@gmail.com</div></div>
+          </a>
+          <a class="contact-link" href="#">
+            <div class="link-icon">📱</div>
+            <div class="link-info"><div class="link-label">WhatsApp / Phone</div><div class="link-val">+91 XXXXX XXXXX</div></div>
+          </a>
+          <a class="contact-link" href="#">
+            <div class="link-icon">💼</div>
+            <div class="link-info"><div class="link-label">LinkedIn</div><div class="link-val">linkedin.com/in/shoheb</div></div>
+          </a>
+          <a class="contact-link" href="#">
+            <div class="link-icon">⌨</div>
+            <div class="link-info"><div class="link-label">GitHub</div><div class="link-val">github.com/shoheb</div></div>
+          </a>
+          <div class="contact-map-box">
+            <div class="map-pin">📍</div>
+            <strong style="color:var(--text);">Malda, West Bengal, India</strong>
+            <span>Hardware services available across Malda District</span>
+            <span style="font-size:.75rem;color:var(--navy2);">Digital services: Pan-India &amp; Global</span>
+          </div>
+
+          <!-- WhatsApp & Telegram buttons injected by script.js -->
+          <div class="direct-contact-slot"></div>
+        </div>
+
+        <!-- Right: Form -->
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group"><label>Full Name *</label><input type="text" name="from_name" placeholder="Your full name" required /></div>
+            <div class="form-group"><label>Email Address *</label><input type="email" name="from_email" placeholder="your@email.com" required /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Phone / WhatsApp</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" /></div>
+            <div class="form-group">
+              <label>Service Type *</label>
+              <select name="service" required>
+                <option value="">Select a service…</option>
+                <optgroup label="Digital Services (Global)">
+                  <option>Web Development</option>
+                  <option>Web Audit / Review</option>
+                  <option>Remote Software Support</option>
+                  <option>Data Entry &amp; Typing</option>
+                </optgroup>
+                <optgroup label="Hardware Services (Malda Only)">
+                  <option>Hardware Repair / Upgrade</option>
+                  <option>OS Installation</option>
+                  <option>Custom PC Building</option>
+                  <option>Network / Peripheral Setup</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Budget Range</label>
+            <select name="budget">
+              <option>Below ₹1,000</option>
+              <option>₹1,000 – ₹5,000</option>
+              <option>₹5,000 – ₹15,000</option>
+              <option>₹15,000+</option>
+              <option>Let's discuss</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Project Details *</label><textarea name="message" placeholder="Describe your project or issue in detail…" required></textarea></div>
+          <button type="submit" class="btn-primary" style="width:100%;font-size:1rem;padding:15px;">Send Message →</button>
+          <p style="font-size:.74rem;color:var(--text3);text-align:center;margin-top:8px;">
+            I'll reply within 24 hours. For hardware enquiries, please mention your area in Malda.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div><!-- /contact -->
+
+
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
