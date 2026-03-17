@@ -184,9 +184,9 @@ body::before {
   color: var(--text);
   text-decoration: none;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2.4rem;
-  font-weight: 600;
-  transition: color 0.2s;
+  font-size: 30px;
+  font-weight: 800;
+  transition: color 0.1s;
 }
 .mobile-menu a:hover { color: var(--navy2); }
 
